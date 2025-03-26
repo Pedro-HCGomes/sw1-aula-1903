@@ -6,8 +6,8 @@ app.get('/', ( request, response) => {
     response.set('Olá Codespaces!!!');
 });
 
-app.get('/', ( request, response) => {
-    response.set('Boa Tarde!!!');
+app.get('/mensagem/:nome', ( request, response) => {
+    response.set('Boa Tarde ' + request.params['nome']);
 });
 
 app.listen(port, () => {
